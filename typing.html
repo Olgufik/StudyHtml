@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function generateText(letters, length) {
+        let text = "";
+        for (let i = 0; i < length; i++) {
+            let n = getRandomNumber(letters.length - 1);
+            text += letters[n];
+        }
+        return text;
+    }
+
+    function getRandomNumber(max) {
+        return Math.round(Math.random() * max);
+    }
+
+    alert("Вас приветствует программа по обучению слепой печати");
+
+    let object = {
+        level1: {
+            text : generateText(["ф", "а"], 10),
+        },
+        level2: {
+            text : generateText(["ы", "в"], 10),
+        },
+        level3: {
+            text : generateText(["о", "ж"], 10),
+        },
+    }
+    for (let key in object) {
+        while(true) {
+
+        alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки — на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. А теперь повторяйте за мной")
+
+        let userText = prompt(object[key].text);
+
+        if (userText === object[key].text) {
+            alert("Всё верно!");
+            break;
+        } else {
+            alert("Вы ошиблись. Попробуйте ещё раз");
+        }
+    }
+    }
+</script>
+
+</html>

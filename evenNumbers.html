@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+
+<script>
+
+    const getEvenMassive = (array) => {
+
+        let evenArray = [];
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0)
+                evenArray.push(array[i]);
+        }
+        return evenArray;
+    }
+
+    let arr = [];
+    let n = +prompt("Введите количество элементов массива");
+
+    for (let i = 0; i < n; i++) {
+        let massiveElement = +prompt(`Введите ${i + 1}-й элемент массива`);
+        arr.push(massiveElement);
+    }
+
+    const evenArray = getEvenMassive(arr);
+
+    if (evenArray.length === 0)
+        alert("В массиве нет чётных чисел")
+    else
+        alert(evenArray);
+
+
+</script>
+
+</html>

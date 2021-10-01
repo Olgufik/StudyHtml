@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+  let deposit = prompt("Введите сумму вклада");
+  let percent = prompt("Введите процентную ставку");
+  let time = prompt("Введите срок вклада (лет)");
+  deposit = +deposit;
+  percent = +percent;
+  time = +time;
+  let countSuccess = 0;
+
+    for (let i = 1; i <= time; i++) {
+        deposit = deposit + deposit * percent/100;
+        countSuccess++;
+        alert ("Размер вклада на " + countSuccess + " -й год: " + deposit.toFixed(2));
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,140 @@
+body {
+    background-color: #f8f8f8;
+}
+.menu li {
+    font-style: italic;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #202020;
+}
+
+.menu li a:hover{
+    color: #a81818;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 80% ;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.description {
+    color: #202020;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+}
+
+.short_description{
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.detailed_description li{
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.detailed_description li:first-letter {
+    color: #370470;
+    font-size: 20px;
+}
+
+.characteristics li{
+    color: #29434e;
+    list-style-type: none;
+    font-size: 18px;
+    list-style-image: url(img/heart.png);
+}
+
+.characteristics_table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #000;
+    grid-gap: 1px;
+}
+
+.characteristics_table > div {
+    justify-items: center;
+    align-items: center;
+    display: grid;
+
+    /*box-shadow: 0 0 0 1px black;*/
+
+    outline: 1px solid black;
+}
+
+.characteristics_table > div:first-child {
+    grid-row: 1/3;
+}
+
+.catalog_link {
+    text-decoration: none;
+    color: #29434e;
+    font-style: italic;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: #202020;
+    text-transform: uppercase;
+}
+
+.input {
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.content .input[type="text"], .input[type='email'] {
+    width: 300px;
+}
+
+.content .input[type="email"]:focus {
+    color: #370470;
+    background-color: #FFE073;
+}
+
+.content .input[type="text"] {
+    text-transform: capitalize;
+}
+
+#custom {
+    width: 100px;
+}
+
+.label {
+    display: inline-block;
+    width: 120px;
+    color: #004c3f;
+    font-size: 17px;
+    text-align: center;
+}
+
+.border_product {
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+.border_product:hover {
+    border: 1px solid transparent;
+    /*border: none;*/
+}
+
+.border_catalog {
+    border: 4px double #7f0000;
+}

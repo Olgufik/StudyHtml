@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+  const getMin = (array) => {
+
+    let min = 1000;
+
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] <= min) {
+        min = array[i];
+    }
+    return min;
+  }
+  }
+
+  let arr = [];
+  let n = +prompt("Введите количество элементов массива");
+
+  for (let i = 0; i < n; i++) {
+    let massiveElement = +prompt(`Введите ${i + 1}-й элемент массива`);
+    arr.push(massiveElement);
+  }
+
+  const min = getMin(arr);
+
+  alert(min);
+
+</script>
+
+</html>

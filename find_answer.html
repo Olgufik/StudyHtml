@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадай число</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let answer = +(Math.random() * 100).toFixed(0);
+    let attempt = 1;
+    let userAnswer1 = 0;
+    let userAnswer2 = 0;
+
+    const player1 = prompt("Введите имя игрока 1");
+    const player2 = prompt("Введите имя игрока 2");
+
+
+    for (; !isNaN(userAnswer1) && !isNaN(userAnswer2);) {
+
+        userAnswer1 = +prompt(`Игрок ${player1}, угадайте число от 0 до 100. Попытка № ${attempt}`);
+
+        if (isNaN(userAnswer1)) {
+            alert("Игрок " + player1 + " завершил игру");
+            alert("Загаданное число: " + answer);
+            break;
+        }
+
+        userAnswer2 = +prompt(`Игрок ${player2}, угадайте число от 0 до 100. Попытка № ${attempt}`);
+
+        if (isNaN(userAnswer2)) {
+            alert("Игрок " + player2 + " завершил игру");
+            alert("Загаданное число: " + answer);
+            break;
+        }
+
+        if (userAnswer1 > answer) {
+
+            alert(player1 + ", ваш ответ больше загаданного числа.");
+
+        } else if (userAnswer1 < answer) {
+
+            alert(player1 + ", ваш ответ меньше загаданного числа.");
+
+        } else if (userAnswer1 === answer) {
+
+            alert(player1 + ", вы угадали!");
+
+        }
+
+
+        if (userAnswer2 > answer) {
+
+            alert(player2 + ", ваш ответ больше загаданного числа.");
+
+        } else if (userAnswer2 < answer) {
+
+            alert(player2 + ", ваш ответ меньше загаданного числа.");
+
+        } else if (userAnswer2 === answer) {
+
+            alert(player2 + ", вы угадали!");
+
+        }
+
+        attempt++;
+
+    }
+    // while (attempt <= attemptsCount) {
+    //   let userAnswer = +prompt("Угадайте число от 0 до 100, у вас 7 попыток. Попытка № " + attempt);
+    //
+    //   if (userAnswer > answer) {
+    //     alert("Ваш ответ больше загаданного числа.");
+    //   } else if (userAnswer < answer) {
+    //     alert("Ваш ответ меньше загаданного числа.");
+    //   } else if (userAnswer === answer) {
+    //     alert("Вы угадали!");
+    //     break;
+    //   } else {
+    //     alert("Необходимо ввести число!");
+    //   }
+    //   attempt++;
+    // }
+    //
+    // if (attempt > attemptsCount) {
+    //   alert("К сожалению, вы не угадали. Было загадано число: " + answer);
+    // }
+</script>
+
+</html>

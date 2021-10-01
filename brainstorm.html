@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brainstorm</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let attempt = 1;
+    let attemptsCount = 2;
+    // let answer = ["её крышка", "ее крышка", "крышка этой кастрюли", "крышка кастрюли", "крышка"]
+    let isCorrectAnswer = false;
+    let countSuccess = 0;
+
+    let object = {
+        puzzle1: {
+            answer: ["её крышка", "ее крышка", "крышка этой кастрюли", "крышка кастрюли", "крышка"],
+            question: "Загадка: Что не вместится даже в самую большую кастрюлю?- ответ пишите с маленькой буквы",
+        },
+
+        puzzle2: {
+            answer: ["qweqwe", "asdasdasd", "zxczxczxc", "rtyrty", "fghfgh"],
+            question: "?????????!!!!!!!!!!????",
+        },
+        puzzle3: {
+            answer: ["yuioyuio", "hjklklbm", "hjigobm", "mfaosdav", ",blaspdpmg"],
+            question: "123123123qweqweasd123123 ??? ",
+        },
+        puzzle4: {
+            answer: ["yuioyuio", "hjklklbm", "hjigobm", "mfaosdav", ",blaspdpmg"],
+            question: "123123123qweqweasd123123 ??? ",
+        },
+
+    }
+
+    for (let key in object) {
+
+        while (attempt <= attemptsCount && !isCorrectAnswer) {
+            let userAnswer = prompt(object[key].question);
+
+            for (let i = 0; i < object[key].answer.length; i++) {
+                if (object[key].answer[i] === userAnswer) {
+                    isCorrectAnswer = true;
+                }
+            }
+
+            if (isCorrectAnswer) {
+                alert("Поздравляю, Вы угадали!");
+                countSuccess++;
+            } else {
+                alert("Ваш ответ неверный.");
+            }
+
+            attempt++;
+        }
+
+        if (!isCorrectAnswer) {
+            alert("У вас кончились попытки. К сожалению, вы не угадали.");
+        }
+
+        attempt = 1;
+        isCorrectAnswer = false;
+
+    }
+
+    alert('Вы набрали баллов: ' + countSuccess);
+
+    // var isCorrectAnswer = false;
+    //
+    // while (attempt <= attemptsCount && !isCorrectAnswer) {
+    //     var userAnswer = prompt("Загадка: Что не вместится даже в самую большую кастрюлю?- ответ пишите с маленькой буквы");
+    //
+    //     for (let i = 0; i < answer.length; i++) {
+    //         if (answer[i] === userAnswer) {
+    //             isCorrectAnswer = true;
+    //         }
+    //     }
+    //
+    //     if (isCorrectAnswer) {
+    //         alert("Поздравляю, Вы угадали!");
+    //     } else {
+    //         alert("Ваш ответ неверный.");
+    //     }
+    //
+    //     attempt++;
+    // }
+    //
+    // if (!isCorrectAnswer) {
+    //     alert("К сожалению, вы не угадали. Было загадано : "
+    //         + answer[0] + ", "
+    //         + answer[1] + ", "
+    //         + answer[2] + ", "
+    //         + answer[3] + ", "
+    //         + answer[4] + "."
+    //     );
+    // }
+
+
+</script>
+
+</html>

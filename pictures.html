@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%BF%D0%B5%D0%BD%D0%B8%D1%81.jpg/246px-%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%BF%D0%B5%D0%BD%D0%B8%D1%81.jpg" alt="" id="dick">
+  <img src="https://media.istockphoto.com/photos/adorable-scottish-straight-cat-peeking-from-behind-a-banner-picture-id1097008888?k=6&m=1097008888&s=612x612&w=0&h=QA1fHyMcS1kHaqyrFlUUIdgthlpUpJ6lf3LkBfK8T-M=" alt="" id="cat">
+</div>
+
+</body>
+
+
+<script>
+
+  const answer = prompt('Введите число');
+
+  if(+answer % 2 === 0) {
+    let img = document.getElementById('cat');
+    img.style.display = 'block';
+    img.style.height = '500px'
+    let imgX = document.getElementById('dick');
+    imgX.style.display = 'none';
+  } else {
+    let img = document.getElementById('dick');
+    img.style.display = 'block';
+    img.style.height = '500px'
+    let imgX = document.getElementById('cat');
+    imgX.style.display = 'none';
+  }
+
+</script>
+
+</html>
